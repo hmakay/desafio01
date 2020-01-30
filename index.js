@@ -71,16 +71,7 @@ app.post( '/projects/:id/task/', verifyIdInArray, countRequest, (req,res) => {
   if(indexProjects >= 0){
     projects[indexProjects].tasks =  arrayTask
   }
-
-
-  // let NewProject =  projects.filter( project  => {
-  //   if(project.id===id){
-  //     project.task = arrayTask
-  //   }
-
-  // } )
-
-     
+  
       
   return res.json(projects)
 })
@@ -111,10 +102,6 @@ app.put('/projects/:id',  verifyIdInArray ,  countRequest,(req, res) => {
   })
 
   
-
- 
- 
-
 })
 
 app.listen(3030);
